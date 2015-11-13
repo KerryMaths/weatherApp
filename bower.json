@@ -1,0 +1,23 @@
+{
+  "name": "weatherApp",
+  "version": "1.1.8",
+  "authors": [
+    "KerryMaths <kerry.mathurin@gmail.com>"
+  ],
+  "description": "should display forcast based on location",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.7"
+  }
+}

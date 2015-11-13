@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" ng-app="myApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather App</title>
+        <meta name="description" content="weather">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <header>
+    	<h1>Welcome to the Weather App</h1>
+    </header>
+
+    <body>
+
+    <input type="text" ng-model="city" placeholder="Enter City" />
+    <div ng-sparkline ng-city="San Francisco"></div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/directives/ngSparklineDirective.js"></script>
+    <script src="js/directives/ngCityDirective.js"></script>
+    </body>
+</html>
