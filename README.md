@@ -13,3 +13,6 @@ To install app:
 - Then in the root directory:
 	- Download dependencies: `npm install bower`
 
+To Do
+- Add function to update search
+

@@ -3,7 +3,7 @@
 
 	function ngCity(){
 		return {
-			controller: function($scope){}
+			controller: function($scope){ $scope.test="test me";}
 	  };
 	}
 

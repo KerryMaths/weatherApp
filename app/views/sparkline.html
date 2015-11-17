@@ -1,0 +1,8 @@
+<div class="sparkline">
+	<h3><b>{{weather.name}}, {{weather.sys.country}}</b> <span> - <small>{{date | date}}</small></span></h3>
+	<h4>{{weather.main.temp-273.15 | number:2}}°C</h4>
+	<p>{{weather.weather[0].description}}</span>
+	<p>{{weather.main.humidity}}</p>
+	<p>{{weather.sys.sunrise | date:'HH:mm:ss' }}</p>
+	<p>{{weather.sys.sunset | date:'HH:mm:ss' }}</p>
+</div>
