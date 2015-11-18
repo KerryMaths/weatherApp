@@ -3,11 +3,11 @@
 $color1 : #BBA52E;
 $color2 : #B13D3D; 
 
-html, body {
+html, body, table, section {
 	width: 100%;
 	height: 100%;
 	color: white;
-	background-color: $color2;
+	background-color: $color1;
 	font-family: 'Dosis';
 	text-align:center
 }
@@ -22,8 +22,11 @@ header, input{
 }
 
 input {
-	width: 400px;
-	height: 60px;
+	width: 300px;
+	height: 45px;
+	font-size: 2em;
+  text-align: center;
+  color: $color2;
 }
 
 #divCont {
@@ -42,3 +45,38 @@ input {
   clip: rect(0px,300px, 250px,0px);
 }
 
+#weatherName {
+	font-size: 2em;
+}
+
+#weatherTemp {
+	font-size: 6em;
+	margin: 0px;
+}
+
+#weatherDescr {
+	font-size: 2em;
+	margin:0px;
+}
+
+.humidity {
+	width: 23%; 
+}
+
+.pressure {
+	width: 100px; 
+	padding-left: 30px;
+}
+
+.wind {
+	width: 400px;
+}
+
+section {
+	margin-left: 23%;
+	//margin-right: 30%;
+}
+
+.tr {
+	//height: 30px;
+}

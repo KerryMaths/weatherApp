@@ -1,15 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
-html, body {
+html, body, table, section {
   width: 100%;
   height: 100%;
   color: white;
-  background-color: #B13D3D;
+  background-color: #BBA52E;
   font-family: 'Dosis';
   text-align: center; }
 
 input {
-  width: 400px;
-  height: 60px; }
+  width: 300px;
+  height: 45px;
+  font-size: 2em;
+  text-align: center;
+  color: #B13D3D; }
 
 #divCont {
   margin-top: -100px;
@@ -23,3 +26,27 @@ input {
 #weatherIcon {
   position: absolute;
   clip: rect(0px, 300px, 250px, 0px); }
+
+#weatherName {
+  font-size: 2em; }
+
+#weatherTemp {
+  font-size: 6em;
+  margin: 0px; }
+
+#weatherDescr {
+  font-size: 2em;
+  margin: 0px; }
+
+.humidity {
+  width: 23%; }
+
+.pressure {
+  width: 100px;
+  padding-left: 30px; }
+
+.wind {
+  width: 400px; }
+
+section {
+  margin-left: 23%; }

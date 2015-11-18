@@ -14,5 +14,7 @@ To install app:
 	- Download dependencies: `npm install && bower install `
 
 To Do
-- add css styling 
+- add different waether icons
+- randomly change bkg & input color should match
+- add media query for table
 
