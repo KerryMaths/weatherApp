@@ -11,8 +11,8 @@ To install app:
 - Download and install Nodejs and NPM (Node package manager)
 - Also install Bower globally: `npm install -g bower `
 - Then in the root directory:
-	- Download dependencies: `npm install bower`
+	- Download dependencies: `npm install && bower install `
 
 To Do
-- Add function to update search
+- add css styling 
 

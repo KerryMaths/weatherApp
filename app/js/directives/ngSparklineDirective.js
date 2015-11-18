@@ -4,7 +4,7 @@
 	function ngSparkline(){
 		return {
 			restrict: 'A',
-			//require: '^ngModel',
+			require: '?ngModel',
 			scope: {
 				ngModel: '='
 			},
@@ -43,7 +43,6 @@
 				 	scope.getGeoLoc(corrd)
 					 .success(function(data){
 					 	scope.weather = data;
-					 	console.log(scope);
 				 });
 				 };
 				 geoLoc();
@@ -51,12 +50,9 @@
 				 scope.$watch('ngModel', function(){
 				 	clearTimeout();
 				  setTimeout(function() {
-				 	 console.log('value change: ' + scope.ngModel);
-
 				 	 scope.getTemp(scope.ngModel)
 					 .success(function(data){
 					 	scope.weather = data;
-					 	console.log(data);
 					 });
 				 	}, 2000);
 				 }); 
