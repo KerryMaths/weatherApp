@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
-html, body, table, section {
+html {
   width: 100%;
   height: 100%;
   color: white;
-  background-color: #BBA52E;
+  background-color: #B13D3D;
   font-family: 'Dosis';
   text-align: center; }
 
@@ -14,18 +14,13 @@ input {
   text-align: center;
   color: #B13D3D; }
 
-#divCont {
-  margin-top: -100px;
-  margin-bottom: 170px; }
-
-#weatherIconContainer {
-  width: 200px;
-  height: 200px;
-  margin-right: 350px; }
+table {
+  margin-right: auto;
+  margin-left: auto; }
 
 #weatherIcon {
   position: absolute;
-  clip: rect(0px, 300px, 250px, 0px); }
+  margin-left: -85px; }
 
 #weatherName {
   font-size: 2em; }
@@ -38,15 +33,40 @@ input {
   font-size: 2em;
   margin: 0px; }
 
+/*
 .humidity {
-  width: 23%; }
+	width: 23%; 
+}
 
 .pressure {
-  width: 100px;
-  padding-left: 30px; }
+	width: 100px; 
+	padding-left: 30px;
+}
 
 .wind {
-  width: 400px; }
+	width: 400px;
+}
 
-section {
-  margin-left: 23%; }
+#humSpan, #pressSpan, #windSpan  {
+	font-size: 20px; 
+	padding: 10px;
+}
+
+#pressSpan, #windSpan {
+	float: left
+}
+*/
+.otherIcons {
+  width: 50px;
+  height: 50px; }
+
+#windIcon {
+  padding-left: 10px; }
+
+#pressureIcon {
+  width: 40px;
+  height: 40px;
+  padding-left: 25px; }
+
+.floatLeft {
+  float: left; }

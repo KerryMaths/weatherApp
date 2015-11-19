@@ -3,22 +3,13 @@
 $color1 : #BBA52E;
 $color2 : #B13D3D; 
 
-html, body, table, section {
+html, {
 	width: 100%;
 	height: 100%;
 	color: white;
-	background-color: $color1;
+	background-color: $color2;
 	font-family: 'Dosis';
 	text-align:center
-}
-
-div {
-	//margin-left: 10%;
-  //margin-right: 50%;
-}
-
-header, input{
-	//margin-left: 31%;
 }
 
 input {
@@ -29,20 +20,14 @@ input {
   color: $color2;
 }
 
-#divCont {
-	margin-top: -100px;
-	margin-bottom: 170px;
-}
-
-#weatherIconContainer {
-	width:200px;
-	height:200px;
-	margin-right: 350px;
+table {
+	margin-right: auto;
+  margin-left: auto;
 }
 
 #weatherIcon {
 	position: absolute;
-  clip: rect(0px,300px, 250px,0px);
+	margin-left: -85px;
 }
 
 #weatherName {
@@ -58,7 +43,7 @@ input {
 	font-size: 2em;
 	margin:0px;
 }
-
+/*
 .humidity {
 	width: 23%; 
 }
@@ -72,11 +57,33 @@ input {
 	width: 400px;
 }
 
-section {
-	margin-left: 23%;
-	//margin-right: 30%;
+#humSpan, #pressSpan, #windSpan  {
+	font-size: 20px; 
+	padding: 10px;
 }
 
-.tr {
-	//height: 30px;
+#pressSpan, #windSpan {
+	float: left
 }
+*/
+.otherIcons {
+	width:50px; 
+	height:50px
+}
+
+#windIcon {
+ padding-left: 10px;
+}
+
+#pressureIcon {
+	width:40px; 
+	height:40px; 
+	padding-left: 25px;
+}
+
+.floatLeft {
+	float: left
+}
+
+
+

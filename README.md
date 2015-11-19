@@ -1,6 +1,6 @@
 # Weather App
 
-## Discription
+## Description
 
 This app should display the weather forecast, based on your location.
 The data will be based on [openweathermap](http://openweathermap.org/)
@@ -12,6 +12,9 @@ To install app:
 - Also install Bower globally: `npm install -g bower `
 - Then in the root directory:
 	- Download dependencies: `npm install && bower install `
+
+How to run
+- run `gulp watch` to host app locally
 
 To Do
 - add different waether icons

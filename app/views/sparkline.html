@@ -2,10 +2,13 @@
 <div class="sparkline">
 	<h3 id="weatherName"><strong>{{weather.name}}, {{weather.sys.country}}</strong> <span> - <small>{{date | date}}</small></span></h3>
 	<h4 id="weatherTemp">{{weather.main.temp-273.15 | number:0}}°C</h4>
-	<div id="divCont"><span id="weatherIconContainer"><img id="weatherIcon" src="img/weatherIcons.png" alt="WeatherIcons.png"></span></div>
-	<br><br><br>
+	<br>
+	<img id="weatherIcon" src="img/cloudIcon.png" alt="WeatherIcons.png">
+	<br><br><br><br><br><br><br><br><br>
+
 	<p id="weatherDescr">{{weather.weather[0].description}}</span>
 	<br><br>
+
 	<section style="display:none">
 	<table><tbody>
 	<tr>
@@ -21,14 +24,14 @@
 	<section>
 	<table><tbody>
 	<tr class="tr" >
-		<td class="humidity" ><span style="font-size: 20px; padding: 10px;">{{weather.main.humidity}}%</span></td>
-		<td class="pressure"><span style="font-size: 20px; padding: 10px; float: left">{{weather.main.pressure | number:0}} hpa</span></td>
-		<td class="wind"><span style="font-size: 20px; padding: 10px; float: left">{{weather.wind.speed | number:0}} mph</span></td>
+		<td class="humidity" ><span id="humSpan">{{weather.main.humidity}}%</span></td>
+		<td class="pressure"><span id="pressSpan">{{weather.main.pressure | number:0}} hpa</span></td>
+		<td class="wind"><span id="windSpan">{{weather.wind.speed | number:0}} mph</span></td>
 	</tr>
 	<tr class="tr" >
-	 <td><span style=""><img src="img/humidity1.png" alt="humidity1" style="width:50px; height:50px"></span></td>
-	 <td class="pressure"><span style="float: left"><img src="img/pressure2.png" alt="pressure2" style="width:40px; height:40px; padding-left: 25px;"></span></td>
-	 <td class="wind"><span style="float: left"><img src="img/wind3.png" alt="wind3" style="width:50px; height:50px; padding-left: 10px;"></span></td>
+	 <td><span ><img class="otherIcons" src="img/humidity1.png" alt="humidity1" ></span></td>
+	 <td class="pressure"><span class="floatLeft"><img src="img/pressure2.png" alt="pressure2" id="pressureIcon"></span></td>
+	 <td class="wind"><span class="floatLeft"><img class="otherIcons" src="img/wind3.png" alt="wind3" id="windIcon"></span></td>
 	</tr></tbody></table>
 	</section>
 </div>

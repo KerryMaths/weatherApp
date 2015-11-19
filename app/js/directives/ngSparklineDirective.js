@@ -33,6 +33,14 @@
 			}],
 			link: function(scope) {
 
+				var img = jQuery('#weatherIcon');//select specific icon
+
+				var prevSearch;
+				var getPrevSearch = function(){
+				 	prevSearch = scope.weather.name.toLowerCase();
+				 	return prevSearch;
+				};
+
 				var geoLoc = function(){
 				 	navigator.geolocation.getCurrentPosition(showPosition);
 				 };
@@ -43,6 +51,30 @@
 				 	scope.getGeoLoc(corrd)
 					 .success(function(data){
 					 	scope.weather = data;
+					 	getPrevSearch();
+
+					 	switch(scope.weather.weather[0].main.toLowerCase()){
+						 	case 'clear':
+						 	  img.attr('src','img/sunIcon.png');
+						 		console.log('Clear works');
+						 		break;
+						 	case 'clouds':
+						 	  img.attr('src','img/cloudIcon.png');
+						 		console.log('Clouds works');
+						 		break;
+						 	case 'rain':
+						 	  img.attr('src','img/rainIcon.png');
+						 		console.log('rain works');
+						 		break;
+						 	case 'snow':
+						 	  img.attr('src','img/snowIcon.png');
+						 		console.log('snow works');
+						 		break;	
+						 	default:
+						 		img.attr('src','img/cloudIcon.png');
+						 		console.log('default: clouds');
+						 		break;
+						 }
 				 });
 				 };
 				 geoLoc();
@@ -53,6 +85,46 @@
 				 	 scope.getTemp(scope.ngModel)
 					 .success(function(data){
 					 	scope.weather = data;
+
+					 	if(scope.weather.name.toLowerCase() === prevSearch){
+							//do nothing
+							console.log("its run and its equal");
+
+					 	}
+					 	else if (prevSearch === undefined){
+							//its undefinded" do nothing
+						}
+						else{
+							var color = ['#5D9CEC', '#4FC1E9', '#48CFAD', '#A0D468', '#FFCE54', '#FC6E51', '#ED5565', '#AC92EC', '#EC87C0', '#656D78'];
+ 							var colorRand = Math.floor((Math.random() * color.length) + 0);
+ 							jQuery('html').css({'background-color': color[colorRand]});
+ 							jQuery('input').css({'color': color[colorRand]});
+							getPrevSearch();
+						}
+
+					 	switch(scope.weather.weather[0].main.toLowerCase()){
+						 	case 'clear':
+						 	  img.attr('src','img/sunIcon.png');
+						 		console.log('Clear works');
+						 		break;
+						 	case 'clouds':
+						 	  img.attr('src','img/cloudIcon.png');
+						 		console.log('Clouds works');
+						 		break;
+						 	case 'rain':
+						 	  img.attr('src','img/rainIcon.png');
+						 		console.log('rain works');
+						 		break;
+						 	case 'snow':
+						 	  img.attr('src','img/snowIcon.png');
+						 		console.log('snow works');
+						 		break;	
+						 	default:
+						 		img.attr('src','img/cloudIcon.png');
+						 		console.log('default: clouds');
+						 		break;
+						 }
+
 					 });
 				 	}, 2000);
 				 }); 
