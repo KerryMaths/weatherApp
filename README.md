@@ -14,10 +14,8 @@ To install app:
 	- Download dependencies: `npm install && bower install `
 
 How to run
-- run `gulp watch` to host app locally
+- To host app locally:
+	- in Terminal run: `gulp watch` 
+	- or Command-line run: `$gulp watch` 
 
-To Do
-- add different waether icons
-- randomly change bkg & input color should match
-- add media query for table
 
