@@ -34,6 +34,7 @@
 			link: function(scope) {
 
 				var img = jQuery('#weatherIcon');//select specific icon
+				var br = jQuery('.brHide');
 
 				var prevSearch;
 				var getPrevSearch = function(){
@@ -56,22 +57,27 @@
 					 	switch(scope.weather.weather[0].main.toLowerCase()){
 						 	case 'clear':
 						 	  img.attr('src','img/sunIcon.png');
+						 	  br.show();
 						 		console.log('Clear works');
 						 		break;
 						 	case 'clouds':
 						 	  img.attr('src','img/cloudIcon.png');
+						 	  br.hide();
 						 		console.log('Clouds works');
 						 		break;
 						 	case 'rain':
 						 	  img.attr('src','img/rainIcon.png');
+						 	  br.show();
 						 		console.log('rain works');
 						 		break;
 						 	case 'snow':
 						 	  img.attr('src','img/snowIcon.png');
+						 	  br.show();
 						 		console.log('snow works');
 						 		break;	
 						 	default:
 						 		img.attr('src','img/cloudIcon.png');
+						 		br.hide();
 						 		console.log('default: clouds');
 						 		break;
 						 }
@@ -105,22 +111,27 @@
 					 	switch(scope.weather.weather[0].main.toLowerCase()){
 						 	case 'clear':
 						 	  img.attr('src','img/sunIcon.png');
+						 	  br.show();
 						 		console.log('Clear works');
 						 		break;
 						 	case 'clouds':
 						 	  img.attr('src','img/cloudIcon.png');
+						 	  br.hide();
 						 		console.log('Clouds works');
 						 		break;
 						 	case 'rain':
 						 	  img.attr('src','img/rainIcon.png');
+						 	  br.show();
 						 		console.log('rain works');
 						 		break;
 						 	case 'snow':
 						 	  img.attr('src','img/snowIcon.png');
+						 	  br.show();
 						 		console.log('snow works');
 						 		break;	
 						 	default:
 						 		img.attr('src','img/cloudIcon.png');
+						 		br.hide();
 						 		console.log('default: clouds');
 						 		break;
 						 }

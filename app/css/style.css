@@ -33,14 +33,13 @@ table {
   font-size: 2em;
   margin: 0px; }
 
+.pressure {
+  padding-left: 70px;
+  padding-right: 70px; }
+
 /*
 .humidity {
 	width: 23%; 
-}
-
-.pressure {
-	width: 100px; 
-	padding-left: 30px;
 }
 
 .wind {
@@ -65,8 +64,7 @@ table {
 
 #pressureIcon {
   width: 40px;
-  height: 40px;
-  padding-left: 25px; }
+  height: 40px; }
 
 .floatLeft {
   float: left; }

@@ -2,7 +2,8 @@
 
 ## Description
 
-This app should display the weather forecast, based on your location.
+This a single page Angular app, created using custom directives.
+The app should display the weather forecast, based on your location.
 The data will be based on [openweathermap](http://openweathermap.org/)
 
 ## Instruction
