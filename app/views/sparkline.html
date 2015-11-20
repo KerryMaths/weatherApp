@@ -1,25 +1,13 @@
-	<br>
+<br>
 <div class="sparkline">
 	<h3 id="weatherName"><strong>{{weather.name}}, {{weather.sys.country}}</strong> <span> - <small>{{date | date}}</small></span></h3>
 	<h4 id="weatherTemp">{{weather.main.temp-273.15 | number:0}}°C</h4>
 	<br>
-	<img id="weatherIcon" src="img/cloudIcon.png" alt="WeatherIcons.png">
+	<div id="weatherIconDiv"><img id="weatherIcon" src="img/cloudIcon.png" alt="WeatherIcons.png"></div>
 	<br><br><br><br><br><br><br><br class="brHide"><br class="brHide">
 
 	<p id="weatherDescr">{{weather.weather[0].description}}</span>
 	<br><br>
-
-	<section style="display:none">
-	<table><tbody>
-	<tr>
-	 <td class=""><span style="font-size: 20px; padding: 10px; float: right">{{weather.sys.sunrise | date:'HH:mm:ss' }}</span></td>
-	 <td class=""><span style="font-size: 20px; padding: 10px; float: left">{{weather.sys.sunset | date:'HH:mm:ss' }}</span></td>
-	</tr>
-	<tr>
-	 <td><span style="float: right"><img src="img/sunrise.png" alt="sunrise" style="width:50px; height:50px; padding-left: 12px; margin-left: -70px;"></span></td>
-	 <td><span style="float: left"><img src="img/sunset.png" alt="sunset" style="width:50px; height:50px"></span></td>
-	</tr></tbody></table>
-	</section>
 
 	<section>
 	<table><tbody>
@@ -34,4 +22,5 @@
 	 <td class="wind"><span class="floatLeft"><img class="otherIcons" src="img/wind3.png" alt="wind3" id="windIcon"></span></td>
 	</tr></tbody></table>
 	</section>
+	<br><br>
 </div>

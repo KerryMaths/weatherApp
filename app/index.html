@@ -18,15 +18,21 @@
     <input id="cityIn" type="text" ng-model="city" placeholder="Enter City" />
     </header>
     <body>
+    <div id="cityContainer">
 
     <div id="city" ng-sparkline ng-model="city" ></div>
 
-    <footer> </footer>
-
+		</div>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="js/app.js"></script>
     <script src="js/directives/ngSparklineDirective.js"></script>
     <script src="js/directives/ngCityDirective.js"></script>
     </body>
+    <footer>
+     <div id="copyright" style="display: none">
+      <p>The data is being supplied by <a href="http://openweathermap.org/"> openweathermap</a></p>
+      <a href="http://KerryMathurin.com/" class="ui-link">Developed by Kerry Mathurin</a>
+     </div>
+    </footer>
 </html>

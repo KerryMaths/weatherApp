@@ -1,11 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 html {
-  width: 100%;
-  height: 100%;
   color: white;
-  background-color: #B13D3D;
   font-family: 'Dosis';
   text-align: center; }
+
+body {
+  margin-top: 50px;
+  background-image: url("../img/bkg.jpeg");
+  opacity: 0.85; }
+
+#city {
+  width: 75%;
+  height: 75%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px; }
+
+#city {
+  background-color: #B13D3D; }
 
 input {
   width: 300px;
@@ -18,9 +31,10 @@ table {
   margin-right: auto;
   margin-left: auto; }
 
-#weatherIcon {
+#weatherIconDiv {
   position: absolute;
-  margin-left: -85px; }
+  margin-left: -85px;
+  display: inline; }
 
 #weatherName {
   font-size: 2em; }
@@ -37,24 +51,6 @@ table {
   padding-left: 70px;
   padding-right: 70px; }
 
-/*
-.humidity {
-	width: 23%; 
-}
-
-.wind {
-	width: 400px;
-}
-
-#humSpan, #pressSpan, #windSpan  {
-	font-size: 20px; 
-	padding: 10px;
-}
-
-#pressSpan, #windSpan {
-	float: left
-}
-*/
 .otherIcons {
   width: 50px;
   height: 50px; }

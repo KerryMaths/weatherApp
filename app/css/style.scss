@@ -3,13 +3,30 @@
 $color1 : #BBA52E;
 $color2 : #B13D3D; 
 
-html, {
-	width: 100%;
-	height: 100%;
+html {
 	color: white;
-	background-color: $color2;
 	font-family: 'Dosis';
-	text-align:center
+	text-align:center;
+}
+
+body {
+	margin-top: 50px;
+	background-image: url("../img/bkg.jpeg");
+	opacity: 0.85;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+#city {
+	width: 75%;
+	height: 75%;
+	margin-top: 50px;
+	margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+#city {
+	background-color: $color2;
 }
 
 input {
@@ -26,8 +43,13 @@ table {
 }
 
 #weatherIcon {
+	
+}
+
+#weatherIconDiv {
 	position: absolute;
 	margin-left: -85px;
+	display: inline;
 }
 
 #weatherName {
@@ -50,24 +72,6 @@ table {
   padding-right: 70px;
 }
 
-/*
-.humidity {
-	width: 23%; 
-}
-
-.wind {
-	width: 400px;
-}
-
-#humSpan, #pressSpan, #windSpan  {
-	font-size: 20px; 
-	padding: 10px;
-}
-
-#pressSpan, #windSpan {
-	float: left
-}
-*/
 .otherIcons {
 	width:50px; 
 	height:50px

@@ -35,11 +35,20 @@
 
 				var img = jQuery('#weatherIcon');//select specific icon
 				var br = jQuery('.brHide');
+				var body = jQuery('body');
 
+				//find name of city & if its different to previous change
 				var prevSearch;
 				var getPrevSearch = function(){
 				 	prevSearch = scope.weather.name.toLowerCase();
 				 	return prevSearch;
+				};
+
+				//find name of Main weather & if its different to previous change
+				var previousMain;
+				var getPreviousMain = function(){
+				 previousMain = scope.weather.weather[0].main.toLowerCase();
+				 return previousMain;
 				};
 
 				var geoLoc = function(){
@@ -54,33 +63,34 @@
 					 	scope.weather = data;
 					 	getPrevSearch();
 
-					 	switch(scope.weather.weather[0].main.toLowerCase()){
+						switch(scope.weather.weather[0].main.toLowerCase()){
 						 	case 'clear':
+						 		body.css({'background-image': 'url("img/bkg.jpeg")'});
 						 	  img.attr('src','img/sunIcon.png');
 						 	  br.show();
-						 		console.log('Clear works');
 						 		break;
 						 	case 'clouds':
-						 	  img.attr('src','img/cloudIcon.png');
+						 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
+						 	  img.attr('src','img/cloudIcon.png').fadeIn('slow');
 						 	  br.hide();
-						 		console.log('Clouds works');
 						 		break;
 						 	case 'rain':
+						 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
 						 	  img.attr('src','img/rainIcon.png');
 						 	  br.show();
-						 		console.log('rain works');
 						 		break;
 						 	case 'snow':
+						 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
 						 	  img.attr('src','img/snowIcon.png');
 						 	  br.show();
-						 		console.log('snow works');
 						 		break;	
 						 	default:
+						 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
 						 		img.attr('src','img/cloudIcon.png');
 						 		br.hide();
-						 		console.log('default: clouds');
 						 		break;
 						 }
+
 				 });
 				 };
 				 geoLoc();
@@ -94,7 +104,6 @@
 
 					 	if(scope.weather.name.toLowerCase() === prevSearch){
 							//do nothing
-							console.log("its run and its equal");
 
 					 	}
 					 	else if (prevSearch === undefined){
@@ -103,38 +112,52 @@
 						else{
 							var color = ['#5D9CEC', '#4FC1E9', '#48CFAD', '#A0D468', '#FFCE54', '#FC6E51', '#ED5565', '#AC92EC', '#EC87C0', '#656D78'];
  							var colorRand = Math.floor((Math.random() * color.length) + 0);
- 							jQuery('html').css({'background-color': color[colorRand]});
+
+ 							jQuery('#city').css({'background-color': color[colorRand]});
  							jQuery('input').css({'color': color[colorRand]});
 							getPrevSearch();
 						}
 
 					 	switch(scope.weather.weather[0].main.toLowerCase()){
 						 	case 'clear':
+						 		body.css({'background-image': 'url("img/bkg.jpeg")'});
 						 	  img.attr('src','img/sunIcon.png');
 						 	  br.show();
-						 		console.log('Clear works');
 						 		break;
 						 	case 'clouds':
-						 	  img.attr('src','img/cloudIcon.png');
+						 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
+						 	  img.attr('src','img/cloudIcon.png').fadeIn('slow');
 						 	  br.hide();
-						 		console.log('Clouds works');
 						 		break;
 						 	case 'rain':
+						 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
 						 	  img.attr('src','img/rainIcon.png');
 						 	  br.show();
-						 		console.log('rain works');
 						 		break;
 						 	case 'snow':
+						 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
 						 	  img.attr('src','img/snowIcon.png');
 						 	  br.show();
-						 		console.log('snow works');
 						 		break;	
 						 	default:
+						 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
 						 		img.attr('src','img/cloudIcon.png');
 						 		br.hide();
-						 		console.log('default: clouds');
 						 		break;
 						 }
+
+						 if (scope.weather.weather[0].main.toLowerCase() === previousMain){
+							img.fadeIn('slow');
+						 }
+
+						else if (previousMain === undefined){
+							//do nothing
+
+						}
+						else {
+							img.hide();
+						}
+						getPreviousMain();
 
 					 });
 				 	}, 2000);
