@@ -3,36 +3,38 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
-<html class="no-js" ng-app="myApp"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Weather App</title>
-        <meta name="description" content="weather">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
+<html class="no-js" data-ng-app="myApp"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather App</title>
+    <meta name="description" content="weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
 
     <header>
-    <h1>Find out the Weather in your city</h1>
-    <input id="cityIn" type="text" ng-model="city" placeholder="Enter City" />
+      <h1>Find out the Weather in your city</h1>
+      <input id="cityIn" type="text" data-ng-model="city" placeholder="Enter City" />
     </header>
-    <body>
+  
     <div id="cityContainer">
-
-    <div id="city" ng-sparkline ng-model="city" ></div>
-
-		</div>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/directives/ngSparklineDirective.js"></script>
-    <script src="js/directives/ngCityDirective.js"></script>
-    </body>
+      <div id="city" data-ng-sparkline data-ng-model="city" ></div>
+    </div>
+    
     <footer>
      <div id="copyright" style="display: none">
       <p>The data is being supplied by <a href="http://openweathermap.org/"> openweathermap</a></p>
       <a href="http://KerryMathurin.com/" class="ui-link">Developed by Kerry Mathurin</a>
      </div>
     </footer>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/directives/ngSparklineDirective.js"></script>
+    <script src="js/directives/ngCityDirective.js"></script>
+   
+  </body>
 </html>

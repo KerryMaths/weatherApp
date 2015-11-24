@@ -6,21 +6,24 @@
 	<div id="weatherIconDiv"><img id="weatherIcon" src="img/cloudIcon.png" alt="WeatherIcons.png"></div>
 	<br><br><br><br><br><br><br><br class="brHide"><br class="brHide">
 
-	<p id="weatherDescr">{{weather.weather[0].description}}</span>
+	<p id="weatherDescr">{{weather.weather[0].description}}</p>
 	<br><br>
 
 	<section>
-	<table><tbody>
-	<tr class="tr" >
-		<td class="humidity" ><span id="humSpan">{{weather.main.humidity}}%</span></td>
-		<td class="pressure"><span id="pressSpan">{{weather.main.pressure | number:0}} hpa</span></td>
-		<td class="wind"><span id="windSpan">{{weather.wind.speed | number:0}} mph</span></td>
-	</tr>
-	<tr class="tr" >
-	 <td><span ><img class="otherIcons" src="img/humidity1.png" alt="humidity1" ></span></td>
-	 <td class="pressure"><span class="floatLeft"><img src="img/pressure2.png" alt="pressure2" id="pressureIcon"></span></td>
-	 <td class="wind"><span class="floatLeft"><img class="otherIcons" src="img/wind3.png" alt="wind3" id="windIcon"></span></td>
-	</tr></tbody></table>
+		<table>
+			<tbody>
+				<tr class="tr" >
+					<td class="humidity" ><span id="humSpan">{{weather.main.humidity}}%</span></td>
+					<td class="pressure"><span id="pressSpan">{{weather.main.pressure | number:0}} hpa</span></td>
+					<td class="wind"><span id="windSpan">{{weather.wind.speed | number:0}} mph</span></td>
+				</tr>
+				<tr class="tr" >
+				 <td><span ><img class="otherIcons" src="img/humidity1.png" alt="humidity1" ></span></td>
+				 <td class="pressure"><span class="floatLeft"><img src="img/pressure2.png" alt="pressure2" id="pressureIcon"></span></td>
+				 <td class="wind"><span class="floatLeft"><img class="otherIcons" src="img/wind3.png" alt="wind3" id="windIcon"></span></td>
+				</tr>
+			</tbody>
+		</table>
 	</section>
 	<br><br>
 </div>

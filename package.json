@@ -2,7 +2,7 @@
   "name": "weather_app",
   "version": "1.1.8",
   "description": "should show you the forcast for the next few days based on location",
-  "main": "gulpfile.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
