@@ -8,6 +8,6 @@
 	}
 
 	angular
-	.module('myApp')
+	.module('weatherApp')
 	.directive('ngCity', ngCity);
 })(); 

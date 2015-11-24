@@ -19,7 +19,7 @@ body {
 #city {
 	width: 75%;
 	height: 75%;
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-right: auto;
   margin-left: auto;
   border-radius: 10px;
@@ -31,10 +31,11 @@ body {
 
 input {
 	width: 300px;
-	height: 45px;
+	height: 35px;
 	font-size: 2em;
   text-align: center;
   color: $color2;
+  border-radius: 10px;
 }
 
 table {
@@ -69,7 +70,7 @@ table {
 
 .pressure {
 	padding-left: 70px;
-  padding-right: 70px;
+  padding-right: 56px;
 }
 
 .otherIcons {
