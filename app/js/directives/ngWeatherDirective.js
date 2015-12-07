@@ -95,6 +95,14 @@
 					 }
 				 };
 
+		var loader = function(){
+		 	if (scope.weather.name !== ''){
+				jQuery('#loader').hide();
+				jQuery('.loader').show();
+				jQuery('input').show();
+			}
+		}
+
 		var geoLoc = function(){
 		 	navigator.geolocation.getCurrentPosition(showPosition);
 		};
@@ -107,11 +115,7 @@
 			 	scope.weather = data;
 			 	getPrevSearch();
 				switchwWatherMainIcon();
-				if (scope.weather.name !== ''){
-					jQuery('#loader').hide();
-					jQuery('.loader').show();
-					jQuery('input').show();
-				}
+				loader();
 		 });
 		 };
 		 geoLoc();
@@ -140,12 +144,7 @@
 				}
 
 			 	switchwWatherMainIcon();
-
-			 	if (! navigator.geolocation.getCurrentPosition(showPosition)){
-					jQuery('#loader').hide();
-					jQuery('#weatherDir').show();
-					jQuery('input').show();
-				}
+			 	loader();
 
 				 if (scope.weather.weather[0].main.toLowerCase() === previousMain){
 					img.fadeIn('slow');
