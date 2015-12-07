@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 
-$color1 : #BBA52E;
-$color2 : #B13D3D; 
+$color1: #bba52e;
+$color2: #b13d3d; 
 
 html {
 	color: white;
@@ -10,32 +10,19 @@ html {
 }
 
 body {
-	margin-top: 50px;
-	background-image: url("../img/bkg.jpeg");
+	margin-top: 0px;
+	//background-image: url("../img/bkg.jpeg");
 	opacity: 0.85;
   filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
-#city {
-	width: 75%;
-	height: 75%;
-	margin-top: 40px;
-	margin-right: auto;
-  margin-left: auto;
-  border-radius: 10px;
-}
-
-#city {
-	background-color: $color2;
-}
-
 input {
-	width: 300px;
+	width: 75%;
 	height: 35px;
 	font-size: 2em;
   text-align: center;
   color: $color2;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 table {
@@ -43,8 +30,27 @@ table {
   margin-left: auto;
 }
 
-#weatherIcon {
-	
+.loader {
+	display: none;
+}
+
+#loader {
+	margin: 200px;
+}
+
+#city {
+	width: 75%;
+	height: 75%;
+	margin-top: -20px;
+	margin-bottom: 10px;
+	margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: $color2;
+}
+
+#cityContainer {
+	margin-top: 80px;
 }
 
 #weatherIconDiv {
@@ -58,11 +64,13 @@ table {
 }
 
 #weatherTemp {
-	font-size: 6em;
+	font-size: 4em;
 	margin: 0px;
+	margin-top: -30px
 }
 
 #weatherDescr {
+	padding-top: 150px;
 	font-size: 2em;
 	margin:0px;
 }
@@ -90,5 +98,23 @@ table {
 .floatLeft {
 	float: left
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 767px) {
+/* Styles */
+	#city {
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	#cityContainer {
+		margin-top: 0px;
+	}
+}
+/* End of Smartphones (portrait and landscape) ----------- */
+
 
 

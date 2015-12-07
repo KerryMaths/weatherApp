@@ -11,16 +11,13 @@
     <meta name="description" content="weather">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
   </head>
   <body>
 
-    <header>
-      <h1>Find out the Weather in your city</h1>
-      <input id="cityIn" type="text" data-ng-model="city" placeholder="Enter City" />
-    </header>
-  
     <div id="cityContainer">
       <div id="city" data-ng-Weather data-ng-model="city" ></div>
+      <input id="cityIn" class="loader" type="text" data-ng-model="city" placeholder="Enter City" />
     </div>
     
     <footer>

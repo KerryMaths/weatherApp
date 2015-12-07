@@ -5,34 +5,41 @@ html {
   text-align: center; }
 
 body {
-  margin-top: 50px;
-  background-image: url("../img/bkg.jpeg");
+  margin-top: 0px;
   opacity: 0.85;
   filter: alpha(opacity=80);
   /* For IE8 and earlier */ }
 
-#city {
-  width: 75%;
-  height: 75%;
-  margin-top: 40px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 10px; }
-
-#city {
-  background-color: #B13D3D; }
-
 input {
-  width: 300px;
+  width: 75%;
   height: 35px;
   font-size: 2em;
   text-align: center;
-  color: #B13D3D;
-  border-radius: 10px; }
+  color: #b13d3d;
+  border-radius: 8px; }
 
 table {
   margin-right: auto;
   margin-left: auto; }
+
+.loader {
+  display: none; }
+
+#loader {
+  margin: 200px; }
+
+#city {
+  width: 75%;
+  height: 75%;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #b13d3d; }
+
+#cityContainer {
+  margin-top: 80px; }
 
 #weatherIconDiv {
   position: absolute;
@@ -43,10 +50,12 @@ table {
   font-size: 2em; }
 
 #weatherTemp {
-  font-size: 6em;
-  margin: 0px; }
+  font-size: 4em;
+  margin: 0px;
+  margin-top: -30px; }
 
 #weatherDescr {
+  padding-top: 150px;
   font-size: 2em;
   margin: 0px; }
 
@@ -67,3 +76,15 @@ table {
 
 .floatLeft {
   float: left; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 767px) {
+  /* Styles */
+  #city {
+    width: 100%; }
+  input {
+    width: 100%; }
+  #cityContainer {
+    margin-top: 0px; } }
+
+/* End of Smartphones (portrait and landscape) ----------- */

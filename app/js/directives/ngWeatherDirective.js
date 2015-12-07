@@ -54,51 +54,64 @@
 
 		//find name of Main weather & if its different to previous change
 		var previousMain;
+
 		var getPreviousMain = function(){
 		 previousMain = scope.weather.weather[0].main.toLowerCase();
 		 return previousMain;
 		};
 
+		var switchwWatherMainIcon = function() {
+					switch(scope.weather.weather[0].main.toLowerCase()){
+					 	case 'clear':
+					 		body.css({'background-image': 'url("img/bkg.jpeg")'});
+					 	  img.attr('src','img/sunIcon.png');
+					 	  br.show();
+					 		break;
+					 	case 'clouds':
+					 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
+					 	  img.attr('src','img/cloudIcon.png').fadeIn('slow');
+					 	  br.hide();
+					 		break;
+					 	case 'rain':
+					 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
+					 	  img.attr('src','img/rainIcon.png');
+					 	  br.show();
+					 		break;
+					 	case 'drizzle':
+					 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
+					 	  img.attr('src','img/rainIcon.png');
+					 	  br.show();
+					 		break;
+					 	case 'snow':
+					 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
+					 	  img.attr('src','img/snowIcon.png');
+					 	  br.show();
+					 		break;	
+					 	default:
+					 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
+					 		img.attr('src','img/cloudIcon.png');
+					 		br.hide();
+					 		break;
+					 }
+				 };
+
 		var geoLoc = function(){
 		 	navigator.geolocation.getCurrentPosition(showPosition);
-		 };
+		};
 
-		 var showPosition =  function(position){
+		var showPosition =  function(position){
 		 	var corrd = "lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
 
 		 	scope.getGeoLoc(corrd)
 			 .success(function(data){
 			 	scope.weather = data;
 			 	getPrevSearch();
-
-				switch(scope.weather.weather[0].main.toLowerCase()){
-				 	case 'clear':
-				 		body.css({'background-image': 'url("img/bkg.jpeg")'});
-				 	  img.attr('src','img/sunIcon.png');
-				 	  br.show();
-				 		break;
-				 	case 'clouds':
-				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
-				 	  img.attr('src','img/cloudIcon.png').fadeIn('slow');
-				 	  br.hide();
-				 		break;
-				 	case 'rain':
-				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
-				 	  img.attr('src','img/rainIcon.png');
-				 	  br.show();
-				 		break;
-				 	case 'snow':
-				 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
-				 	  img.attr('src','img/snowIcon.png');
-				 	  br.show();
-				 		break;	
-				 	default:
-				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
-				 		img.attr('src','img/cloudIcon.png');
-				 		br.hide();
-				 		break;
-				 }
-
+				switchwWatherMainIcon();
+				if (scope.weather.name !== ''){
+					jQuery('#loader').hide();
+					jQuery('.loader').show();
+					jQuery('input').show();
+				}
 		 });
 		 };
 		 geoLoc();
@@ -119,40 +132,20 @@
 				}
 				else{
 					var color = ['#5D9CEC', '#4FC1E9', '#48CFAD', '#A0D468', '#FFCE54', '#FC6E51', '#ED5565', '#AC92EC', '#EC87C0', '#656D78'];
-						var colorRand = Math.floor((Math.random() * color.length) + 0);
+					var colorRand = Math.floor((Math.random() * color.length) + 0);
 
-						jQuery('#city').css({'background-color': color[colorRand]});
-						jQuery('input').css({'color': color[colorRand]});
+					jQuery('#city').css({'background-color': color[colorRand]});
+					jQuery('input').css({'color': color[colorRand]});
 					getPrevSearch();
 				}
 
-			 	switch(scope.weather.weather[0].main.toLowerCase()){
-				 	case 'clear':
-				 		body.css({'background-image': 'url("img/bkg.jpeg")'});
-				 	  img.attr('src','img/sunIcon.png');
-				 	  br.show();
-				 		break;
-				 	case 'clouds':
-				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
-				 	  img.attr('src','img/cloudIcon.png').fadeIn('slow');
-				 	  br.hide();
-				 		break;
-				 	case 'rain':
-				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
-				 	  img.attr('src','img/rainIcon.png');
-				 	  br.show();
-				 		break;
-				 	case 'snow':
-				 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
-				 	  img.attr('src','img/snowIcon.png');
-				 	  br.show();
-				 		break;	
-				 	default:
-				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
-				 		img.attr('src','img/cloudIcon.png');
-				 		br.hide();
-				 		break;
-				 }
+			 	switchwWatherMainIcon();
+
+			 	if (! navigator.geolocation.getCurrentPosition(showPosition)){
+					jQuery('#loader').hide();
+					jQuery('#weatherDir').show();
+					jQuery('input').show();
+				}
 
 				 if (scope.weather.weather[0].main.toLowerCase() === previousMain){
 					img.fadeIn('slow');

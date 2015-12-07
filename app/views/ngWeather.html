@@ -1,10 +1,13 @@
-<br>
-<div id="weatherDir">
-	<h3 id="weatherName"><strong>{{weather.name}}, {{weather.sys.country}}</strong> <span> - <small>{{date | date}}</small></span></h3>
-	<h4 id="weatherTemp">{{weather.main.temp-273.15 | number:0}}°C</h4>
+<div id="loader" class="circles-loader">
+  Loading…
+</div>
+
+<div id="weatherDir" class="loader">
+	<h4 id="weatherName"><strong>{{weather.name}}, {{weather.sys.country}}</strong> <span> - <small>{{date | date}}</small></span></h4>
+	<h3 id="weatherTemp">{{weather.main.temp - 273.15 | number:0}}°C</h3>
 	<br>
 	<div id="weatherIconDiv"><img id="weatherIcon" src="img/cloudIcon.png" alt="WeatherIcons.png"></div>
-	<br><br><br><br><br><br><br><br class="brHide"><br class="brHide">
+	<br class="brHide"><br class="brHide">
 
 	<p id="weatherDescr">{{weather.weather[0].description}}</p>
 	<br><br>
@@ -25,5 +28,4 @@
 			</tbody>
 		</table>
 	</section>
-	<br><br>
 </div>
