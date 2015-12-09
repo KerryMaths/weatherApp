@@ -63,9 +63,9 @@
 
 		var switchwWeatherMainIcon = function() {
 			var now = new Date();
-			var getTime = now.getTime();
+			var currentTime = now.getTime() / 1000;
 			var sunset = scope.weather.sys.sunset;
-			if (getTime > sunset){
+			if ( sunset < currentTime){
 				//if its past sunset display night icons
 				switch(scope.weather.weather[0].main.toLowerCase()){
 					case 'clear':
