@@ -67,7 +67,6 @@
 			var sunset = scope.weather.sys.sunset;
 			if (getTime > sunset){
 				//if its past sunset display night icons
-				console.log(previousMain);
 				switch(scope.weather.weather[0].main.toLowerCase()){
 					case 'clear':
 				 		body.css({'background-image': 'url("img/bkg.jpeg")'});
