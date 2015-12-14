@@ -4,5 +4,3 @@
 	angular.module('weatherApp', []);
 
 })(); 
-
-
