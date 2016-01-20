@@ -12,13 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link id="logo" rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
   </head>
   <body>
 
     <div id="cityContainer">
       <div id="city" data-ng-Weather data-ng-model="city" ></div>
-      <input id="cityIn" class="loader" type="text" data-ng-model="city" placeholder="Enter City" />
+      <input id="cityIn" class="loader" type="text" data-ng-model="city" ng-model-options="{ debounce: 1000 }" placeholder="Enter City" />
     </div>
     
     <footer>

@@ -71,7 +71,7 @@
 					case 'clear':
 				 		body.css({'background-image': 'url("img/bkg.jpeg")'});
 						weatherDescr.css({'padding-top': '150px'});
-				 	  img.attr('src','img/clearNightIcon.png');
+				 	  img.attr('src','img/clearNightIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'clouds':
@@ -107,19 +107,19 @@
 				 	case 'rain':
 				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
 				 		weatherDescr.css({'padding-top': '200px'});
-				 	  img.attr('src','img/rainNightIcon.png');
+				 	  img.attr('src','img/rainNightIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'drizzle':
 				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
 				 		weatherDescr.css({'padding-top': '200px'});
-				 	  img.attr('src','img/rainNightIcon.png');
+				 	  img.attr('src','img/rainNightIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'hail':
 				 		body.css({'background-image': 'url("img/hailBkg.jpeg")', 'background-repeat': 'no-repeat', 'background-size': '100%'});
 				 		weatherDescr.css({'padding-top': '200px'});
-				 	  img.attr('src','img/hailNightIcon.png');
+				 	  img.attr('src','img/hailNightIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'snow':
@@ -137,7 +137,7 @@
 				 	default:
 				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
 						weatherDescr.css({'padding-top': '200px'});
-				 		img.attr('src','img/cloudIcon.png');
+				 		img.attr('src','img/cloudIcon.png').fadeIn('slow');;
 				 		br.hide();
 				 		break;
 				}
@@ -146,7 +146,7 @@
 				switch(scope.weather.weather[0].main.toLowerCase()){
 				 	case 'clear':
 				 		body.css({'background-image': 'url("img/bkg.jpeg")'});
-				 	  img.attr('src','img/sunIcon.png');
+				 	  img.attr('src','img/sunIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'clouds':
@@ -156,12 +156,12 @@
 				 		break;
 				 	case 'rain':
 				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
-				 	  img.attr('src','img/rainIcon.png');
+				 	  img.attr('src','img/rainIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'drizzle':
 				 		body.css({'background-image': 'url("img/rainBkg.jpeg")'});
-				 	  img.attr('src','img/rainIcon.png');
+				 	  img.attr('src','img/rainIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'mist':
@@ -186,22 +186,22 @@
 				 		break;
 				 	case 'snow':
 				 		body.css({'background-image': 'url("img/snowBkg.jpeg")'});
-				 	  img.attr('src','img/snowIcon.png');
+				 	  img.attr('src','img/snowIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'hail':
 				 		body.css({'background-image': 'url("img/hailBkg.jpeg")', 'background-repeat': 'no-repeat', 'background-size': '100%'});
-				 	  img.attr('src','img/hailIcon.png');
+				 	  img.attr('src','img/hailIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;
 				 	case 'thunderstorm':
 				 		body.css({'background-image': 'url("img/stormBkg.jpeg")', 'background-repeat': 'no-repeat', 'background-size': '100%'});
-				 	  img.attr('src','img/stormIcon.png');
+				 	  img.attr('src','img/stormIcon.png').fadeIn('slow');;
 				 	  br.show();
 				 		break;	
 				 	default:
 				 		body.css({'background-image': 'url("img/cloudyBkg.jpeg")'});
-				 		img.attr('src','img/cloudIcon.png');
+				 		img.attr('src','img/cloudIcon.png').fadeIn('slow');;
 				 		br.hide();
 				 		break;
 				}
@@ -269,12 +269,14 @@
 				}
 				else {
 					img.hide();
+			 		switchwWeatherMainIcon();
+					img.fadeIn('slow');
 				}
 				getPreviousMain();
 
-			 });
+			 });//
 		 	}, 2000);
-		 }); 
+		 }); //
 	}
 
 	angular
